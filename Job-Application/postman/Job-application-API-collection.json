@@ -1,0 +1,44 @@
+{
+  "info": {
+    "name": "Job Application API",
+    "description": "Collection for testing Job API endpoints"
+  },
+  "item": [
+    {
+      "name": "Create Job",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Java Developer\",\n  \"description\": \"Backend development with Spring Boot\",\n  \"minSalary\": \"70000\",\n  \"maxSalary\": \"90000\",\n  \"location\": \"New York\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/jobs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jobs"]
+        }
+      }
+    },
+    {
+      "name": "Get All Jobs",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/jobs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["jobs"]
+        }
+      }
+    }
+  ]
+}
